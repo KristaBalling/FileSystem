@@ -13,8 +13,14 @@ public class Main {
 //            Files.createFile(fileToCreate);
 //            Path dirToCreate = FileSystems.getDefault().getPath("Examples", "Dir4");
 //            Files.createDirectory(dirToCreate);
-            Path dirToCreate = FileSystems.getDefault().getPath("Examples", "Dir2\\Dir3\\Dir4\\Dir5\\Dir6");
-            Files.createDirectories(dirToCreate);
+//
+//            Path dirToCreate = FileSystems.getDefault().getPath("Examples\\Dir2\\Dir3\\Dir4\\Dir5\\Dir6\\Dir7");
+//            Files.createDirectories(dirToCreate);
+
+            Path filePath = FileSystems.getDefault().getPath("Examples\\file1.txt");
+            long size = Files.size(filePath);
+            System.out.println("Size = " + size);
+            System.out.println("Last modified = " + Files.getLastModifiedTime(filePath));
 
 
         } catch (IOException e) {
@@ -24,8 +30,8 @@ public class Main {
 
 //        Path path = FileSystems.getDefault().getPath("WorkingDirectoryFile.txt");
 //        printFile(path);
-////        Path filePath = FileSystems.getDefault().getPath("files","file1.txt");
-//        Path filePath = Paths.get(".","files","file1.txt");
+////        Path filePath = FileSystems.getDefault().getPath("files","file1.txt.txt");
+//        Path filePath = Paths.get(".","files","file1.txt.txt");
 //        printFile(filePath);
 //        filePath = Paths.get("C:\\Users\\Krista\\IdeaProjects\\Paths\\OutThere.txt");
 //        printFile(filePath);
@@ -33,7 +39,7 @@ public class Main {
 //        filePath = Paths.get(".");
 //        System.out.println(filePath.toAbsolutePath());
 //
-//        Path path2 = FileSystems.getDefault().getPath(".", "files", "..", "files", "file1.txt");
+//        Path path2 = FileSystems.getDefault().getPath(".", "files", "..", "files", "file1.txt.txt");
 //        System.out.println(path2.normalize().toAbsolutePath());
 //        printFile(path2.normalize());
 //
